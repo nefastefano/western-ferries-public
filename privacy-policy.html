@@ -1,66 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
-<meta charset="UTF-8">
-<title>Privacy Policy</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Western Ferries Checker: Privacy Policy</title>
 <style>
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-  max-width:700px;
-  margin:auto;
-  padding:40px;
-  line-height:1.6;
-}
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+    color: #14202e;
+    background: #f7f9fb;
+  }
+  h1 { font-size: 1.7rem; margin-bottom: 4px; }
+  h2 { font-size: 1.2rem; margin-top: 2rem; }
+  .updated { color: #5b6b7c; margin-top: 0; }
+  a { color: #0b6bcb; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 0.4rem; }
+  .box { background: #e9f1f9; border-radius: 12px; padding: 12px 16px; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6edf3; background: #0f1720; }
+    .updated { color: #9fb0c1; }
+    a { color: #6cb2ff; }
+    .box { background: #172433; }
+  }
 </style>
 </head>
-
 <body>
 
-<h1>Privacy Policy</h1>
-
-<p>Last updated: March 2026</p>
-
-<p>
-The Western Ferries Status App provides information about the Dunoon to Gourock ferry service.
-</p>
-
-<h2>Information Collection</h2>
+<h1>Western Ferries Checker: Privacy Policy</h1>
+<p class="updated">Last updated: 19 September 2026</p>
 
 <p>
-The app does not require users to create accounts and does not collect personal information directly.
+  Western Ferries Checker is a free, unofficial app that shows the live status, the timetable and
+  community queue reports for the Western Ferries service between Dunoon and Gourock. It is made by
+  Stefano Virgili ("Ste", "I" or "me"). The app is not affiliated with, or endorsed by, Western Ferries.
 </p>
 
-<p>
-The app may use third-party services such as advertising providers that may collect limited device information for the purpose of displaying advertisements.
-</p>
-
-<h2>Advertising</h2>
-
-<p>
-This app may display advertisements provided by third-party ad networks. These services may collect anonymous device identifiers and interaction data in order to show ads and measure performance.
-</p>
-
-<h2>GDPR and Consent</h2>
-
-<p>
-Users located in the UK or the European Economic Area may be presented with a consent request allowing them to choose whether they wish to receive personalised or non-personalised advertisements.
-</p>
-
-<h2>Changes</h2>
-
-<p>
-This privacy policy may be updated from time to time.
-</p>
-
-  <h2>Contact</h2>
-<p>
-For questions, feedback or issues with the app you can contact:
-</p>
-<p>
-sfav1985@gmail.com
-</p>
+<div class="box">
+  <strong>The short version.</strong> There are no accounts, and I don't ask for your name, email
+  address or location. A few anonymous bits of information are used to run the alerts and queue reports,
+  and the app shows ads through Google AdMob. In the UK and the European Economic Area you are asked for
+  your permission before personalised ads are shown.
 </div>
-  
+
+<h2>1. What stays on your phone</h2>
+<ul>
+  <li>A short history of the ferry status (up to 30 days), so you can see recent changes.</li>
+  <li>Your settings, such as the notification and quiet hours switches.</li>
+  <li>A random ID made by the app, used only for queue reports (see section 4), and the time of your last report.</li>
+</ul>
+<p>This information is deleted when you uninstall the app or clear its data.</p>
+
+<h2>2. Loading the ferry information</h2>
+<p>
+  The app loads the ferry status from my server (hosted by Cloudflare), and the timetable and the list of
+  local sponsors from Google Sheets. As with any website or app, these services can see your IP address and
+  basic device information when the app connects. I do not use this to identify you.
+</p>
+
+<h2>3. Notifications</h2>
+<p>
+  If you turn on notifications, the app gets a notification token from Expo's push service and sends it to my
+  server together with your phone type (Android or iPhone) and the date the app was installed. This lets me send
+  you an alert when the ferry service changes to amber or red. The token is not linked to your name, email
+  address or any account. Alerts are delivered through Expo's push notification service.
+</p>
+<p>
+  The token is kept until it stops working (for example if you uninstall the app), or until you ask me to
+  delete it. To stop alerts at any time, turn notifications off in the app or in your phone's settings.
+</p>
+
+<h2>4. Queue reports</h2>
+<p>
+  When you tap "Report queue", the app sends the terminal you chose (Dunoon or Gourock) and the random,
+  anonymous ID that the app made for your phone. My server also sees your IP address, as it does for every
+  request. It stores only scrambled (hashed) versions of the ID and the IP address, together with the time of
+  the report. This is used to count how many different phones have reported, to stop the same phone reporting
+  over and over, and to limit misuse.
+</p>
+<p>
+  Reports older than 30 minutes are ignored and are deleted automatically, at the latest within an hour. Other
+  users only see that a report exists and how long ago it was made, nothing about who made it. Queue reports
+  come from other app users and are not official Western Ferries information.
+</p>
+
+<h2>5. Advertising (Google AdMob)</h2>
+<p>
+  The app shows ads provided by Google AdMob. To show ads and measure how they perform, Google and its
+  partners may collect and use information from your phone, such as your advertising ID, IP address, device
+  details and how you interact with ads. Whether ads are personalised depends on your choice:
+</p>
+<ul>
+  <li>
+    <strong>UK and EEA:</strong> the first time you open the app you are shown a consent form (provided by
+    Google) where you can accept personalised ads, or choose to see less personalised ads.
+  </li>
+  <li>
+    <strong>iPhone:</strong> Apple asks whether the app may track you across other companies' apps and websites.
+    If you say no, you still see ads, just less relevant ones.
+  </li>
+  <li>
+    <strong>Changing your mind:</strong> where the law requires it, the app shows an "Ad privacy settings" link at
+    the bottom of the home screen. You can also reset or limit your advertising ID in your phone's settings.
+  </li>
+</ul>
+<p>
+  You can read how Google uses information from apps that use its services at
+  <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.
+</p>
+
+<h2>6. Local sponsors</h2>
+<p>
+  The "Support Local" section shows local businesses that support the app. Tapping one opens their website or
+  email. I do not share any information about you with sponsors, and they cannot see who you are from the
+  app. Once you visit a sponsor's website, their own privacy policy applies.
+</p>
+
+<h2>7. Who else handles data</h2>
+<ul>
+  <li>Google (ads, and hosting of the timetable and sponsor lists).</li>
+  <li>Cloudflare (hosting my server, which holds the ferry status, notification tokens and queue reports).</li>
+  <li>Expo (delivering notifications).</li>
+</ul>
+<p>
+  I do not sell your information. These providers may process data outside the UK, under their own privacy
+  policies and safeguards.
+</p>
+
+<h2>8. Why this information is used (UK and EU law)</h2>
+<ul>
+  <li>Consent: personalised ads, and notifications (you can withdraw this at any time).</li>
+  <li>Legitimate interests: running the app, keeping queue reports reliable and preventing misuse.</li>
+</ul>
+
+<h2>9. Your rights</h2>
+<p>
+  You can ask me what information I hold that relates to you, ask me to delete it, or withdraw your consent
+  at any time by emailing <a href="mailto:sfav1985@gmail.com">sfav1985@gmail.com</a>. Because the app does not
+  use accounts, I may need you to give me your notification token or queue ID to find your information. If
+  you are unhappy with how your information is handled, you can complain to the UK Information Commissioner's
+  Office at <a href="https://ico.org.uk">ico.org.uk</a>.
+</p>
+
+<h2>10. Children</h2>
+<p>
+  The app is not aimed at children, and I do not knowingly collect information from children.
+</p>
+
+<h2>11. Changes to this policy</h2>
+<p>
+  If the app changes in a way that affects your privacy, I will update this page and the date at the top.
+</p>
+
+<h2>12. Contact</h2>
+<p>
+  Stefano Virgili, <a href="mailto:sfav1985@gmail.com">sfav1985@gmail.com</a>
+</p>
+
 </body>
 </html>
